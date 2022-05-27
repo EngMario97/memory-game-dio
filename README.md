@@ -2,7 +2,7 @@
 
 Esse é o repositório do desafio "Desenvolvendo um jogo da memória" do Módulo III - Javascript do Bootcamp TQI Fullstack Developer
 
-Deployed: https://engmario97.github.io/memory-game-dio/
+Deployed: https://engmario97.github.io/memory-game-dio/ 🚀
 
 ### Os requisitos são:
 
