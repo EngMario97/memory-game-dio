@@ -23,10 +23,12 @@ function flipCard() {
 //função que checa se as cartas são iguais
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
+        new Audio('audio/acertou.mp3').play();
         disableCards();
         return;
     }
 
+    new Audio('audio/errou.mp3').play();
     unflipCards();
 }
 
@@ -68,3 +70,4 @@ function resetBoard() {
 cards.forEach((card) => {
     card.addEventListener('click', flipCard)
 });
+
