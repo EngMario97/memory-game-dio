@@ -59,7 +59,7 @@ function resetBoard() {
 //função que embaralha as cartas
 (function shuffle() {
     cards.forEach((card) => {
-        let ramdomPosition = Math.floor(Math.random() * 12);
+        let ramdomPosition = Math.floor(Math.random() * 24);
         card.style.order = ramdomPosition;
     })
 })();
