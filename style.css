@@ -63,3 +63,21 @@ body {
 .card.flip {
     transform: rotateY(180deg);
 }
+
+#congrats.congrats-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 2rem;
+    display: none;
+    z-index: 1000;
+}
+
+#congrats.show {
+    display: block;
+}
