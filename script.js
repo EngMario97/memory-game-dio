@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let matchedCards = 0;
 
 //função para virar carta
 function flipCard() {
@@ -37,6 +38,10 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 
+    matchedCards += 2;
+    if (matchedCards === cards.length) {
+        showCongrats();
+    }
     resetBoard();
 }
 
@@ -56,6 +61,13 @@ function unflipCards() {
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+}
+
+function showCongrats() {
+    const msg = document.getElementById('congrats');
+    if (msg) {
+        msg.classList.add('show');
+    }
 }
 
 //função que embaralha as cartas
